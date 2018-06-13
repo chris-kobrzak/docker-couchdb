@@ -20,7 +20,7 @@ The `master` branch currently hosts CouchDB 1.7.1.
 
 ### Build the image
 
-To create the image, execute the following command on the `docker-couchdb` directory:
+To create the image, execute the following command:
 
 ```
 $ docker build -t kobretti/couchdb-cors .
@@ -106,4 +106,5 @@ $ docker run -d \
 
 ## Copyright
 
-Copyright (c) 2014 Ferran Rodenas, 2015 Krzysztof Kobrzak.  See [LICENCE](https://github.com/chris-kobrzak/docker-couchdb/blob/master/LICENCE) for details.
+Copyright (c) 2014 Ferran Rodenas, 2015-2018 Krzysztof Kobrzak.
+See [LICENCE](https://github.com/chris-kobrzak/docker-couchdb/blob/master/LICENCE) for details.
