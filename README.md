@@ -7,20 +7,20 @@ but includes the following changes and improvements:
 
   - adds sample CORS configuration to CouchDB,
   - runs everything as user `couchdb`,
-  - uses CouchDB 1.6.1,
+  - uses CouchDB 1.7.1,
   - is based on Debian Wheezy,
   - its Docker image is smaller,
   - includes an ARMv7 port that can be used on RaspberryPi 2 (`armhf` branch).
 
 ## CouchDB version
 
-The `master` branch currently hosts CouchDB 1.6.1.
+The `master` branch currently hosts CouchDB 1.7.1.
 
 ## Usage
 
 ### Build the image
 
-To create the image, execute the following command on the `docker-couchdb` directory:
+To create the image, execute the following command:
 
 ```
 $ docker build -t kobretti/couchdb-cors .
@@ -106,4 +106,5 @@ $ docker run -d \
 
 ## Copyright
 
-Copyright (c) 2014 Ferran Rodenas, 2015 Krzysztof Kobrzak.  See [LICENCE](https://github.com/chris-kobrzak/docker-couchdb/blob/master/LICENCE) for details.
+Copyright (c) 2014 Ferran Rodenas, 2015-2018 Krzysztof Kobrzak.
+See [LICENCE](https://github.com/chris-kobrzak/docker-couchdb/blob/master/LICENCE) for details.
