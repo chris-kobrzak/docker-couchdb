@@ -2,7 +2,7 @@ FROM debian:wheezy
 
 MAINTAINER Krzysztof Kobrzak <chris.kobrzak@gmail.com>
 
-ENV COUCHDB_VERSION 1.6.1
+ENV COUCHDB_VERSION 1.7.1
 
 COPY scripts /usr/local/bin
 

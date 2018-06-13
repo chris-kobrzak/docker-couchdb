@@ -7,14 +7,14 @@ but includes the following changes and improvements:
 
   - adds sample CORS configuration to CouchDB,
   - runs everything as user `couchdb`,
-  - uses CouchDB 1.6.1,
+  - uses CouchDB 1.7.1,
   - is based on Debian Wheezy,
   - its Docker image is smaller,
   - includes an ARMv7 port that can be used on RaspberryPi 2 (`armhf` branch).
 
 ## CouchDB version
 
-The `master` branch currently hosts CouchDB 1.6.1.
+The `master` branch currently hosts CouchDB 1.7.1.
 
 ## Usage
 
