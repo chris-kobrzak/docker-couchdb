@@ -2,15 +2,12 @@
 
 A Dockerfile that produces a Docker image for [Apache CouchDB](http://couchdb.apache.org/).
 
-It is based on the [Ferran Rodenas's version](https://github.com/frodenas/docker-couchdb)
-but includes the following changes and improvements:
+## TL;DR
 
-  - adds sample CORS configuration to CouchDB,
+  - configured with CORS support,
   - runs everything as user `couchdb`,
   - uses CouchDB 1.7.1,
-  - is based on Debian Wheezy,
-  - its Docker image is smaller,
-  - includes an ARMv7 port that can be used on RaspberryPi 2 (`armhf` branch).
+  - is based on the official `couchdb:1` Docker image.
 
 ## CouchDB version
 
