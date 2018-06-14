@@ -6,7 +6,8 @@ RUN \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive && \
   apt-get install -y -qq --no-install-recommends \
-    netcat && \
+    netcat \
+    pwgen && \
   apt-get autoremove -y && \
   apt-get clean
 
