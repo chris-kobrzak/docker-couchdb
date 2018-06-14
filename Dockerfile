@@ -3,8 +3,9 @@ FROM couchdb:1
 MAINTAINER Krzysztof Kobrzak <chris.kobrzak@gmail.com>
 
 COPY scripts /usr/local/bin
+COPY etc/* /usr/local/etc/couchdb/local.d/
 
-# CouchDB dependencies, installation from source, required utilities etc.
+# CouchDB dependencies, required utilities etc.
 RUN \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive && \
@@ -33,14 +34,7 @@ RUN \
     /usr/local/bin/*
 
 RUN \
-  sed -e 's/^bind_address = .*$/bind_address = 0.0.0.0/' -i /usr/local/etc/couchdb/default.ini && \
-  # CORS support in CouchDB
-  sed -i '/\[httpd\]/a enable_cors = true' /usr/local/etc/couchdb/local.ini && \
-  echo '[cors] \
-   \norigins = * \
-   \ncredentials = true \
-   \nheaders = accept, authorization, content-type, origin, referer \
-   \nmethods = GET, PUT, POST, HEAD, DELETE' >> /usr/local/etc/couchdb/local.ini
+  sed -e 's/^bind_address = .*$/bind_address = 0.0.0.0/' -i /usr/local/etc/couchdb/default.ini
 
 USER couchdb
 
