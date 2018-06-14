@@ -2,9 +2,6 @@ FROM couchdb:1
 
 MAINTAINER Krzysztof Kobrzak <chris.kobrzak@gmail.com>
 
-COPY scripts /usr/local/bin
-COPY etc/* /usr/local/etc/couchdb/local.d/
-
 RUN \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive && \
@@ -13,10 +10,14 @@ RUN \
   apt-get autoremove -y && \
   apt-get clean
 
+COPY scripts /usr/local/bin
+COPY etc/* /usr/local/etc/couchdb/local.d/
+
 RUN \
   touch /var/lib/couchdb/couchdb-not-inited && \
   chown -R couchdb:couchdb \
     /usr/local/bin/* \
+    /usr/local/etc/couchdb \
     /usr/local/share/couchdb \
     /usr/local/share/doc \
     /var/lib/couchdb && \
