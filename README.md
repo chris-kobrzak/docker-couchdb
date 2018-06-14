@@ -6,12 +6,12 @@ A Dockerfile that produces a Docker image for [Apache CouchDB](http://couchdb.ap
 
   - configured with CORS support,
   - runs everything as user `couchdb`,
-  - uses CouchDB 1.7.1,
-  - is based on the official `couchdb:1` Docker image.
+  - uses CouchDB 2.1.*,
+  - is based on the official `couchdb:2` Docker image.
 
 ## CouchDB version
 
-The `master` branch currently hosts CouchDB 1.7.1.
+The `master` branch currently hosts CouchDB 2.1.1.
 
 ## Usage
 

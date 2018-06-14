@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-couchDbInitIndicator=/var/lib/couchdb/couchdb-not-inited
+couchDbInitIndicator=/opt/couchdb/lib/couchdb-not-inited
 
 if [[ -e $couchDbInitIndicator ]]; then
   echo "Initialising CouchDB..."
@@ -9,6 +9,6 @@ if [[ -e $couchDbInitIndicator ]]; then
 fi
 
 echo "Starting CouchDB..."
-/usr/local/bin/couchdb
+/opt/couchdb/bin/couchdb
 
 exit 0

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 startCouchDbInBackground() {
-  /usr/local/bin/couchdb -b
+  /opt/couchdb/bin/couchdb -b
 }
 
 stopCouchDb() {
-  /usr/local/bin/couchdb -d
+  /opt/couchdb/bin/couchdb -d
 }
 
 isCouchDbRunnning() {
